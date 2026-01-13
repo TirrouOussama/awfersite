@@ -1,31 +1,52 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    margin: 0;       /* remove default margin */
-    padding: 0;      /* remove default padding */
-    overflow: hidden; /* prevent scrolling */
+    margin: 0;       
+    padding: 0;      
+    overflow: hidden; 
     background-color: #000000;
-    background-image: url("assets/background.svg");
+    background-image: url("assets/background.jpg");
     background-size: cover;
     background-position: center;
 }
 
 
 .companylogo {
-    z-index: 99999;  /* on top */
-    width: 10vw;
-    height: 10vw;
+    z-index: 99999;  
+    width: 12vw;
+    height: 12vw;
     position: absolute;    
-    left: 4vw;
-    top: 2vh;
+    left: 3vw;
+    top: 1.1vh;
     background-image: url("assets/logo.jpg");
-    background-size: contain;      /* fit inside div */
-    background-position: center;   /* center the image */
-    background-repeat: no-repeat;  /* <-- prevents repetition */
-    border-radius: 3vw;
+    background-size: contain;      
+    background-position: center;   
+    background-repeat: no-repeat;  
+    border-radius: 1vw;
+    border-color: #ff00ff;
 }
 
-.block-awfer { /* style for the :after overlay in prod */
+.block-awfer-bg {
+    width: 94vw;
+    height: 6vh;
+    position: absolute;
+    left: 3vw;
+    top: 1.5vh;
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.01)
+    );
+    backdrop-filter: blur(1.5vw);
+    border-radius: 0.5vw;
+    border-radius: 0.2;
+
+}
+
+
+
+.block-awfer { 
     font-family: "Lexend";
     font-weight: 300;
     font-size:10vw;
@@ -55,18 +76,18 @@ html, body {
 
 
 .slogan {
-    width: 65vw;
+    width: 83vw;
     height: 10vw;
 
     color: #ffffff;
-    font-size: 8px;
+    font-size: 10.5px;
     font-family: "Lexend";
     font-weight: 300;
     position: absolute;
-    left: 15vw;
-    top: 3vh;
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
+    left: 14vw;
+    top: 2.2vh;
+    justify-content: center;     
+    align-items: center;       
     text-align: center;
     
     text-shadow:
@@ -88,8 +109,8 @@ html, body {
     position: absolute;
     left: 30vw;
     top: 8vh;
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
+    justify-content: center;     
+    align-items: center;         
     text-align: center;
     
     text-shadow:
@@ -108,9 +129,9 @@ html, body {
     top: 20.5vh;
     background: linear-gradient(
         135deg,
-        rgba(0,180,255,0.25),
-        rgba(0,90,180,0.18),
-        rgba(0,40,120,0.22)
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.1)
     );
     backdrop-filter: blur(1.5vw);
     border-radius: 0.5vw;
@@ -119,7 +140,7 @@ html, body {
 }
 
 
-.block-1 { /* style for the :after overlay in prod */
+.block-1 { 
     width: 46vw;
     height: 19vh;
     position: absolute;    
@@ -139,6 +160,7 @@ html, body {
     border-radius: 32px;
     mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
     animation: loading 4s linear infinite;
+    pointer-events: none;
 }
 
 .block-1-text {
@@ -154,13 +176,13 @@ html, body {
 
     /* Gradient text */
     background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
-    background-size: 500% 500%; /* makes shifting smoother */
-    -webkit-background-clip: text; /* Chrome, Safari */
-    -webkit-text-fill-color: transparent; /* show gradient */
-    background-clip: text; /* Firefox / modern browsers */
+    background-size: 500% 500%; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
     color: transparent;
 
-    /* Glow effect */
+
     text-shadow:
         0 0 0.4vw rgba(255,255,255,0.9),
         0 0 1vw rgba(255,255,255,0.8),
@@ -168,6 +190,7 @@ html, body {
         0 0 4vw rgba(255,255,255,0.3);
 
     animation: gradientShift 4s linear infinite;
+    pointer-events: none;
 }
 
 
@@ -178,20 +201,18 @@ html, body {
     position: absolute;
     left: 52vw;
     top: 20.5vh;
-
     background: linear-gradient(
         135deg,
-        rgba(188,118,0,0.35),
-        rgba(255,0,150,0.25),
-        rgba(0,200,255,0.25)
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.1)
     );
-
     border-radius: 32px;
 }
 
 
 
-.block-2 { /* style for the :after overlay in prod */
+.block-2 { 
     width: 46vw;
     height: 40vh;
     position: absolute;
@@ -212,6 +233,8 @@ html, body {
     border-radius: 32px;
     mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
     animation: loading 4s linear infinite;
+    pointer-events: none;
+
 }
 
 
@@ -226,15 +249,14 @@ html, body {
     font-family: "Lexend";
     font-weight: 100;
 
-    /* Gradient text */
+
     background: linear-gradient(90deg, #00ffff, #0077ff, #00ff77, #00ffff);
-    background-size: 500% 500%; /* makes shifting smoother */
-    -webkit-background-clip: text; /* Chrome, Safari */
-    -webkit-text-fill-color: transparent; /* show gradient */
-    background-clip: text; /* Firefox / modern browsers */
+    background-size: 500% 500%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
     color: transparent;
 
-    /* Glow effect */
     text-shadow:
         0 0 0.4vw rgba(255,255,255,0.9),
         0 0 1vw rgba(255,255,255,0.8),
@@ -242,6 +264,7 @@ html, body {
         0 0 4vw rgba(255,255,255,0.3);
 
     animation: gradientShift 4s linear infinite;
+    pointer-events: none;
 }
 
 .block-3-bg {
@@ -250,19 +273,17 @@ html, body {
     position: absolute;
     left: 3vw;
     top: 41.5vh;
-
     background: linear-gradient(
         135deg,
-        rgba(0,255,150,0.22),
-        rgba(0,180,120,0.18),
-        rgba(0,120,90,0.22)
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.1)
     );
-
     border-radius: 32px;
 }
 
 
-.block-3 { /* style for the :after overlay in prod */
+.block-3 { 
     width: 46vw;
     height: 19vh;
     position: absolute;
@@ -282,6 +303,7 @@ html, body {
     border-radius: 32px;
     mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
     animation: loading 4s linear infinite;
+    pointer-events: none;
 }
 
 .block-3-text {
@@ -295,15 +317,15 @@ html, body {
     font-family: "Lexend";
     font-weight: 100;
 
-    /* Gradient text */
+
     background: linear-gradient(90deg, #ff0000, #ff4500, #ff6347, #ff0000);
-    background-size: 500% 500%; /* makes shifting smoother */
-    -webkit-background-clip: text; /* Chrome, Safari */
-    -webkit-text-fill-color: transparent; /* show gradient */
-    background-clip: text; /* Firefox / modern browsers */
+    background-size: 500% 500%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
     color: transparent;
 
-    /* Glow effect */
+
     text-shadow:
         0 0 0.4vw rgba(255,255,255,0.9),
         0 0 1vw rgba(255,255,255,0.8),
@@ -311,6 +333,7 @@ html, body {
         0 0 4vw rgba(255,255,255,0.3);
 
     animation: gradientShift 4s linear infinite;
+    pointer-events: none;
 }
 
 .block-4-bg {
@@ -319,18 +342,16 @@ html, body {
     position: absolute;
     left: 3vw;
     top: 62.5vh;
-
     background: linear-gradient(
-        120deg,
-        rgba(255,0,150,1),
-        rgba(0,255,255,0.2),
-        rgba(255,255,0,0.35)
+        135deg,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.1)
     );
     border-radius: 32px;
 }
 
-
-.block-4 { /* style for the :after overlay in prod */
+.block-4 { 
     width: 94vw;
     height: 18vh;
     position: absolute;
@@ -350,6 +371,7 @@ html, body {
     border-radius: 32px;
     mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
     animation: loading 4s linear infinite;
+    pointer-events: none;
 }
 
 .block-4-text {
@@ -358,9 +380,6 @@ html, body {
     position: absolute;
     left: 6vw;
     top: 68vh;
-    
-
-
     color: #330000;
     font-size: 10vw;
     font-family: "Lexend";
@@ -368,162 +387,35 @@ html, body {
     position: absolute;
 
     background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
-    background-size: 500% 500%; /* makes shifting smoother */
-    -webkit-background-clip: text; /* Chrome, Safari */
-    -webkit-text-fill-color: transparent; /* show gradient */
-    background-clip: text; /* Firefox / modern browsers */
+    background-size: 500% 500%; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
     color: transparent;
 
-    /* Glow effect */
     text-shadow:
         0 0 0.4vw rgba(255,255,255,0.9),
         0 0 1vw rgba(255,255,255,0.8),
         0 0 2vw rgba(255,255,255,0.6),
         0 0 4vw rgba(255,255,255,0.3);
-
     animation: gradientShift 4s linear infinite;
+    pointer-events: none;
 
 }
 
-.block-5 { /* style for the :after overlay in prod */
-    width: 94vw;
-    height: 5vh;
-    position: absolute;
-    left: 2vw;
-    top: 83vh;
-    padding: 0.2vw;
-    background: conic-gradient(
-        from var(--gradient-angle),
-        rgba(255, 255, 255, 0.1) 0deg,
-        rgba(255, 255, 255, 0.1) 60deg,
-        rgba(255, 255, 255, 0.9) 120deg,
-        rgba(255, 255, 255, 0.1) 180deg,
-        rgba(255, 255, 255, 0.1) 240deg,
-        rgba(255, 255, 255, 0.9) 300deg,
-        rgba(255, 255, 255, 0.1) 360deg
-    );
-    border-radius: 1vw;
-    mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
-    animation: loading 4s linear infinite;
-}
-
-.mobile-icon {
-    z-index: 9999;  /* on top */
-    width: 7vw;
-    height: 7vh;
-    position: absolute;    
-    left: 3vw;
-    top: 82vh;
-    background-image: url("assets/icons/phone.svg");
-    background-size: contain;      /* fit inside div */
-    background-position: center;   /* center the image */
-    background-repeat: no-repeat;  /* <-- prevents repetition */
-}
-
-
-
-.mobile-text {
-    width: 20vw;
-    height: 5vh;
-    color: #ffffff;
-    font-size: 2.5vw;
-    font-family: "Lexend";
-    font-weight: 300;
-    position: absolute;
-    left: 11vw;
-    top: 84vh;
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
-    text-align: center;
-    
-    text-shadow:
-        0 0 0.1vw rgba(255,255,255,0.9),
-        0 0 0.2vw rgba(255,255,255,0.8),
-        0 0 0.4vw rgba(255,255,255,0.6),
-        0 0 1vw rgba(255,255,255,0.3);
-}
-
-.email-icon {
-    z-index: 9999;  /* on top */
-    width: 7vw;
-    height: 7vh;
-    position: absolute;    
-    left: 32vw;
-    top: 82vh;
-    background-image: url("assets/icons/email.svg");
-    background-size: contain;      /* fit inside div */
-    background-position: center;   /* center the image */
-    background-repeat: no-repeat;  /* <-- prevents repetition */
-}
-
-.email-text {
-    width: 20vw;
-    height: 5vh;
-    color: #ffffff;
-    font-size: 2.5vw;
-    font-family: "Lexend";
-    font-weight: 300;
-    position: absolute;
-    left: 40vw;
-    top: 85vh;
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
-    text-align: center;
-    
-    text-shadow:
-        0 0 0.1vw rgba(255,255,255,0.9),
-        0 0 0.2vw rgba(255,255,255,0.8),
-        0 0 0.4vw rgba(255,255,255,0.6),
-        0 0 1vw rgba(255,255,255,0.3);
-}
-
-
-.linkedin-icon {
-    z-index: 9999;  /* on top */
-    width: 7vw;
-    height: 7vh;
-    position: absolute;    
-    left: 62vw;
-    top: 82vh;
-    background-image: url("assets/icons/linkedin.svg");
-    background-size: contain;      /* fit inside div */
-    background-position: center;   /* center the image */
-    background-repeat: no-repeat;  /* <-- prevents repetition */
-}
-
-.linkedin-text {
-    width: 20vw;
-    height: 5vh;
-    color: #ffffff;
-    font-size: 2.5vw;
-    font-family: "Lexend";
-    font-weight: 300;
-    position: absolute;
-    left: 70vw;
-    top: 84vh;
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
-    text-align: center;
-    
-    text-shadow:
-        0 0 0.1vw rgba(255,255,255,0.9),
-        0 0 0.2vw rgba(255,255,255,0.8),
-        0 0 0.4vw rgba(255,255,255,0.6),
-        0 0 1vw rgba(255,255,255,0.3);
-}
 
 .companyinfo-text {
     width: 94vw;
-    height: 5vh;
+    height: 10vh;
     color: #ffffff;
-    font-size: 8px;
+    font-size: 11px;
     font-family: "Lexend";
-    font-weight: 300;
+    font-weight: 100;
     position: absolute;
     left: 4vw;
-    top: 87vh;
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
+    top: 82vh;
+    justify-content: center;    
+    align-items: center;        
     text-align: center;
     white-space: pre-line;
     text-shadow:
@@ -532,6 +424,69 @@ html, body {
         0 0 0.4vw rgba(255,255,255,0.6),
         0 0 1vw rgba(255,255,255,0.3);
 }
+
+.companyinfo-text p {
+    margin: 0.3vh 0;          
+    line-height: 0.2;
+}
+
+.mobile-icon {
+    z-index: 9999; 
+    width: 8vw;
+    height: 8vw;
+    position: absolute;    
+    left: 3vw;
+    top:  83vh;
+    background-image: url("assets/icons/phone.svg");
+    background-size: contain;     
+    background-position: center;   
+    background-repeat: no-repeat;  
+}
+
+
+.email-icon {
+    z-index: 9999;  
+    width: 8vw;
+    height: 8vh;
+    position: absolute;    
+    left: 3vw;
+    top: 86vh;
+    background-image: url("assets/icons/email.svg");
+    background-size: contain;     
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+
+.linkedin-icon {
+    z-index: 9999;  
+    width: 8vw;
+    height: 8vw;
+    position: absolute;    
+    left: 90vw;
+    top: 83vh;
+    background-image: url("assets/icons/linkedin.svg");
+    background-size: contain;     
+    background-position: center;   
+    background-repeat: no-repeat;  
+}
+
+.whatsapp-icon {
+    z-index: 9999; 
+    width: 7vw;
+    height: 7vw;
+    position: absolute;    
+    left: 90vw;
+    top: 88vh;
+    background-image: url("assets/icons/whatsapp.svg");
+    background-size: contain;      
+    background-position: center;   
+    background-repeat: no-repeat;  
+}
+
+
+
+
 
 @property --gradient-angle {
   syntax: "<angle>";
