@@ -1,0 +1,961 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AWFER Patch Notes</title>
+
+<meta name="description"
+      content="Official AWFER patch notes for AWFER Rides and AWFER Drivers.">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet">
+
+<style>
+
+:root{
+
+    --black:#000;
+    --white:#fff;
+
+    --accent:#0066ff;
+
+    --text:rgba(255,255,255,.92);
+    --text2:rgba(255,255,255,.72);
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#000;
+
+    color:var(--text);
+
+    font-family:"Space Grotesk",sans-serif;
+
+    line-height:1.9;
+
+}
+
+a{
+
+    color:var(--accent);
+
+    text-decoration:none;
+
+}
+
+.container{
+
+    width:min(950px,92vw);
+
+    margin:auto;
+
+    padding:70px 0 120px;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-bottom:45px;
+
+    color:var(--text2);
+
+}
+
+.back:hover{
+
+    color:var(--accent);
+
+}
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.logo img{
+
+    width:110px;
+
+    border-radius:20px;
+
+}
+
+h1{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:var(--text2);
+
+    max-width:700px;
+
+    margin:0 auto 65px;
+
+}
+
+
+/* =========================================================
+   PRODUCT SECTIONS
+   ========================================================= */
+
+.product-section{
+
+    margin-top:90px;
+
+    padding-top:75px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.product-section:first-of-type{
+
+    margin-top:0;
+
+    padding-top:0;
+
+    border-top:none;
+
+}
+
+.product-header{
+
+    margin-bottom:45px;
+
+}
+
+.product-title{
+
+    font-size:2.2rem;
+
+    line-height:1.2;
+
+    margin-bottom:10px;
+
+    color:white;
+
+}
+
+.product-description{
+
+    color:var(--text2);
+
+    margin:0;
+
+}
+
+
+/* =========================================================
+   PATCH BLOCK
+   ========================================================= */
+
+.patch{
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    margin-bottom:80px;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.patch + .patch{
+
+    margin-top:80px;
+
+}
+
+
+/* =========================================================
+   PATCH HEADER
+   ========================================================= */
+
+.patch-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.patch-version{
+
+    font-size:1.8rem;
+
+    font-weight:600;
+
+    color:white;
+
+    line-height:1.3;
+
+}
+
+.patch-date{
+
+    color:var(--text2);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:.9rem;
+
+    white-space:nowrap;
+
+    padding-top:6px;
+
+}
+
+.patch-description{
+
+    color:var(--text2);
+
+    margin-bottom:35px;
+
+}
+
+
+/* =========================================================
+   PATCH SECTIONS
+   ========================================================= */
+
+.patch-section{
+
+    margin-top:35px;
+
+    padding-top:30px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.patch-section:first-of-type{
+
+    margin-top:0;
+
+    padding-top:0;
+
+    border-top:none;
+
+}
+
+.patch-section h3{
+
+    font-size:1.15rem;
+
+    margin:0 0 15px;
+
+    color:white;
+
+}
+
+.patch-section ul{
+
+    margin:0 0 0 25px;
+
+}
+
+.patch-section li{
+
+    margin-bottom:12px;
+
+}
+
+
+/* =========================================================
+   NEW
+   ========================================================= */
+
+.new::before{
+
+    content:"NEW";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    padding:2px 8px;
+
+    border:1px solid rgba(0,102,255,.45);
+
+    border-radius:6px;
+
+    color:var(--accent);
+
+    font-size:.7rem;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    vertical-align:2px;
+
+}
+
+
+/* =========================================================
+   IMPROVED
+   ========================================================= */
+
+.improved::before{
+
+    content:"IMPROVED";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    padding:2px 8px;
+
+    border:1px solid var(--border);
+
+    border-radius:6px;
+
+    color:var(--text2);
+
+    font-size:.7rem;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    vertical-align:2px;
+
+}
+
+
+/* =========================================================
+   FIXED
+   ========================================================= */
+
+.fixed::before{
+
+    content:"FIXED";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    padding:2px 8px;
+
+    border:1px solid var(--border);
+
+    border-radius:6px;
+
+    color:var(--text2);
+
+    font-size:.7rem;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    vertical-align:2px;
+
+}
+
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+.security::before{
+
+    content:"SECURITY";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    padding:2px 8px;
+
+    border:1px solid rgba(0,102,255,.45);
+
+    border-radius:6px;
+
+    color:var(--accent);
+
+    font-size:.7rem;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    vertical-align:2px;
+
+}
+
+
+/* =========================================================
+   COMING
+   ========================================================= */
+
+.coming::before{
+
+    content:"COMING";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    padding:2px 8px;
+
+    border:1px solid rgba(0,102,255,.45);
+
+    border-radius:6px;
+
+    color:var(--accent);
+
+    font-size:.7rem;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    vertical-align:2px;
+
+}
+
+
+/* =========================================================
+   COMING SOON
+   ========================================================= */
+
+.coming-soon{
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:45px 35px;
+
+    background:rgba(255,255,255,.02);
+
+    text-align:center;
+
+}
+
+.coming-soon-title{
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+    color:white;
+
+    margin-bottom:12px;
+
+}
+
+.coming-soon-text{
+
+    color:var(--text2);
+
+    margin:0 auto;
+
+    max-width:600px;
+
+}
+
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.notice{
+
+    border-left:3px solid var(--accent);
+
+    padding:20px 25px;
+
+    margin:30px 0;
+
+    background:rgba(0,102,255,.06);
+
+    border-radius:0 12px 12px 0;
+
+}
+
+.top{
+
+    margin-top:35px;
+
+    display:inline-block;
+
+    font-size:.95rem;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+
+    border-top:1px solid var(--border);
+
+    margin-top:120px;
+
+    padding-top:40px;
+
+    text-align:center;
+
+    color:var(--text2);
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:900px){
+
+.container{
+
+    padding:40px 20px 90px;
+
+}
+
+h1{
+
+    font-size:2.2rem;
+
+}
+
+.product-title{
+
+    font-size:1.8rem;
+
+}
+
+.patch{
+
+    padding:25px;
+
+    margin-bottom:55px;
+
+}
+
+.patch + .patch{
+
+    margin-top:55px;
+
+}
+
+.patch-header{
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.patch-date{
+
+    padding-top:0;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body id="top">
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">← Back to Home</a>
+
+
+<div class="logo">
+
+<img src="assets/logo.jpg" alt="AWFER">
+
+</div>
+
+
+<h1>AWFER Patch Notes</h1>
+
+
+<p class="subtitle">
+
+Product updates, improvements, fixes, and technical changes across the AWFER platform.
+
+</p>
+
+
+
+<!-- =========================================================
+     AWFER RIDES
+     ========================================================= -->
+
+<section class="product-section" id="awfer-rides">
+
+
+<div class="product-header">
+
+<h2 class="product-title">
+
+AWFER Rides
+
+</h2>
+
+<p class="product-description">
+
+Updates and improvements to the AWFER Customer experience.
+
+</p>
+
+</div>
+
+
+
+<!-- =========================================================
+     NEW PATCHES ALWAYS GO ABOVE THE PREVIOUS PATCH
+     ========================================================= -->
+
+
+<!-- ===================== v1.0.0 ===================== -->
+
+<div class="patch">
+
+
+<div class="patch-header">
+
+<div class="patch-version">
+
+v1.0.0
+
+</div>
+
+<div class="patch-date">
+
+September 13, 2026
+
+</div>
+
+</div>
+
+
+<p class="patch-description">
+
+Initial AWFER Rides release and platform foundation.
+
+</p>
+
+
+<!-- NEW -->
+
+<div class="patch-section">
+
+
+<h3>New</h3>
+
+<ul>
+
+<li class="new">
+
+Initial AWFER Customer application release.
+
+</li>
+
+<li class="new">
+
+Customer account and authentication system.
+
+</li>
+
+<li class="new">
+
+Customer trip and mobility functionality.
+
+</li>
+
+<li class="new">
+
+Core communication with the AWFER mobility platform.
+
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- IMPROVED -->
+
+<div class="patch-section">
+
+
+<h3>Improved</h3>
+
+<ul>
+
+<li class="improved">
+
+Improved application stability and responsiveness.
+
+</li>
+
+<li class="improved">
+
+Improved communication between AWFER services.
+
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- FIXED -->
+
+<div class="patch-section">
+
+
+<h3>Fixed</h3>
+
+<ul>
+
+<li class="fixed">
+
+Initial release fixes and stability improvements.
+
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- SECURITY -->
+
+<div class="patch-section">
+
+
+<h3>Security</h3>
+
+<ul>
+
+<li class="security">
+
+Strengthened authentication and session handling.
+
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- COMING -->
+
+<div class="patch-section">
+
+
+<h3>Coming</h3>
+
+<ul>
+
+<li class="coming">
+
+Additional AWFER Rides features and improvements.
+
+</li>
+
+<li class="coming">
+
+Account Deletion Will Soon Be Available.
+
+</li>
+
+<li class="coming">
+
+Logout Functionalty Will Soon Be Available.
+
+</li>
+
+<li class="coming">
+
+Mobile Verification Will Be Available After Awfer Drivers App Release.
+
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     AWFER DRIVERS
+     ========================================================= -->
+
+<section class="product-section" id="awfer-drivers">
+
+
+<div class="product-header">
+
+<h2 class="product-title">
+
+AWFER Drivers
+
+</h2>
+
+<p class="product-description">
+
+Updates and improvements to the AWFER Driver experience.
+
+</p>
+
+</div>
+
+
+
+<div class="coming-soon">
+
+
+<div class="coming-soon-title">
+
+Coming in October
+
+</div>
+
+
+<p class="coming-soon-text">
+
+AWFER Drivers is currently in development and will be introduced in October.
+
+Patch notes for the driver platform will be published here as releases become available.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
+<section class="product-section">
+
+
+<div class="product-header">
+
+<h2 class="product-title">
+
+About these patch notes
+
+</h2>
+
+</div>
+
+
+<p>
+
+These patch notes document significant changes made to the AWFER platform, including new functionality, improvements, bug fixes, security changes, and technical updates.
+
+</p>
+
+
+<div class="notice">
+
+<strong>Note:</strong>
+
+Patch notes may describe changes across AWFER Rides, AWFER Drivers, backend infrastructure, and supporting platform services.
+
+</div>
+
+
+</section>
+
+
+
+<a href="#top" class="top">↑ Back to Top</a>
+
+
+
+<footer>
+
+© 2026 AWFER TECH LTD
+
+<br><br>
+
+<a href="mailto:contact@awfer.net">contact@awfer.net</a>
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>
+```
