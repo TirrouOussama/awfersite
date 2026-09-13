@@ -305,7 +305,7 @@ h1{
 
 
 /* =========================================================
-   NEW
+   PATCH LABELS
    ========================================================= */
 
 .new::before{
@@ -334,11 +334,6 @@ h1{
 
 }
 
-
-/* =========================================================
-   IMPROVED
-   ========================================================= */
-
 .improved::before{
 
     content:"IMPROVED";
@@ -364,11 +359,6 @@ h1{
     vertical-align:2px;
 
 }
-
-
-/* =========================================================
-   FIXED
-   ========================================================= */
 
 .fixed::before{
 
@@ -396,11 +386,6 @@ h1{
 
 }
 
-
-/* =========================================================
-   SECURITY
-   ========================================================= */
-
 .security::before{
 
     content:"SECURITY";
@@ -426,11 +411,6 @@ h1{
     vertical-align:2px;
 
 }
-
-
-/* =========================================================
-   COMING
-   ========================================================= */
 
 .coming::before{
 
@@ -496,6 +476,127 @@ h1{
     margin:0 auto;
 
     max-width:600px;
+
+}
+
+
+/* =========================================================
+   TESTERS & SUPPORT
+   ========================================================= */
+
+.support-section{
+
+    margin-top:90px;
+
+    padding-top:75px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.support-header{
+
+    margin-bottom:40px;
+
+}
+
+.support-title{
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+.support-description{
+
+    color:var(--text2);
+
+    margin:0;
+
+}
+
+.support-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.support-card{
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.support-card h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+.support-card p{
+
+    color:var(--text2);
+
+    margin-bottom:22px;
+
+}
+
+.support-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(0,102,255,.45);
+
+    background:rgba(0,102,255,.06);
+
+    color:var(--accent);
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.support-link:hover{
+
+    background:rgba(0,102,255,.14);
+
+    transform:translateY(-2px);
+
+}
+
+.support-email{
+
+    color:var(--accent);
+
+    font-weight:500;
 
 }
 
@@ -597,6 +698,12 @@ h1{
 .patch-date{
 
     padding-top:0;
+
+}
+
+.support-grid{
+
+    grid-template-columns:1fr;
 
 }
 
@@ -812,33 +919,9 @@ Additional AWFER Rides features and improvements.
 
 </li>
 
-<li class="coming">
-
-Account Deletion Will Soon Be Available.
-
-</li>
-
-<li class="coming">
-
-Logout Functionalty Will Soon Be Available.
-
-</li>
-
-<li class="coming">
-
-Mobile Verification Will Be Available After Awfer Drivers App Release.
-
-</li>
-
-
-
 </ul>
 
 </div>
-
-
-
-
 
 
 </div>
@@ -900,6 +983,104 @@ Patch notes for the driver platform will be published here as releases become av
 
 
 <!-- =========================================================
+     TESTERS & SUPPORT
+     ========================================================= -->
+
+<section class="support-section" id="testers-support">
+
+
+<div class="support-header">
+
+<h2 class="support-title">
+
+Testers & Support
+
+</h2>
+
+<p class="support-description">
+
+Help us improve AWFER by becoming a tester, or contact us if you need assistance.
+
+</p>
+
+</div>
+
+
+<div class="support-grid">
+
+
+<!-- TESTERS -->
+
+<div class="support-card">
+
+
+<h3>
+
+Become an AWFER Tester
+
+</h3>
+
+
+<p>
+
+Want to test upcoming AWFER releases and help us improve the platform?
+
+Join the AWFER tester community and support the development of AWFER.
+
+</p>
+
+
+<a class="support-link"
+   href="https://chat.whatsapp.com/K2lhTKWWXH7Lprwb6AeYP1"
+   target="_blank"
+   rel="noopener noreferrer">
+
+Join the Tester Group →
+
+</a>
+
+
+</div>
+
+
+<!-- SUPPORT -->
+
+<div class="support-card">
+
+
+<h3>
+
+Need Support?
+
+</h3>
+
+
+<p>
+
+If you experience an issue, need assistance, or have a question about AWFER, contact our support team.
+
+</p>
+
+
+<a class="support-link"
+   href="mailto:support@awfer.net">
+
+support@awfer.net
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
      ABOUT
      ========================================================= -->
 
@@ -947,7 +1128,7 @@ Patch notes may describe changes across AWFER Rides, AWFER Drivers, backend infr
 
 <br><br>
 
-<a href="mailto:contact@awfer.net">contact@awfer.net</a>
+<a href="mailto:support@awfer.net">support@awfer.net</a>
 
 </footer>
 
